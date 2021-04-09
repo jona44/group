@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <header><h3>Please fill in the name of our dearly departed Member</h3></header>
+</div>
+  <div class="container">
+    <form method="POST">
+      {% csrf_token %}
+       <div class="form-group"> 
+         {{ form|crispy }}
+       </div>
+       <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Submit</button>
+        <small class="text-muted ml-2">
+    </form>   
+  </div>
+
+{% endblock %}
