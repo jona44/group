@@ -7,7 +7,7 @@ class MemberRegForm(ModelForm):
     class Meta:
         model     = Member
         fields    = ['First_Name', 'Last_Name', 'Cell_Number', 
-                    'Surbub', 'Admin'
+                    'Surbub', 
                     ]
 
 class DeceasedForm(ModelForm):
