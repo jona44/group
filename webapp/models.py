@@ -14,7 +14,7 @@ class Member(models.Model):
     Last_Name     = models.CharField(max_length=20)
     Cell_Number   = models.CharField(max_length=10 )
     Surbub        = models.CharField(max_length=200, choices=SURBUBS)
-    Admin         = models.ForeignKey(User, default=True, on_delete=models.CASCADE)
+    
     Date          = models.DateTimeField(auto_now_add=True)
    
 
@@ -39,7 +39,7 @@ class Contributions(models.Model):
 
     deceased          = models.ForeignKey(Deceased, default=True, on_delete=models.CASCADE)
     Name              = models.ForeignKey(Member, default=True, on_delete=models.CASCADE, related_name= '+')
-    Admin             = models.ForeignKey(User, default=True, on_delete=models.CASCADE)
+    
    
     def __str__(self): 
         return "%s" % (self.Name), "%s" %(self.Admin)        
