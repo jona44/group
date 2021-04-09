@@ -10,7 +10,7 @@ def home(request):
     
     context = {
         'members' :  Member.objects.all(), 
-        'memberCount'    : Member.objects.count()          
+        # 'memberCount'    : Member.objects.count()          
      }
     return render(request, 'home.html', context)
 
