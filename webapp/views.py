@@ -12,10 +12,10 @@ def home(request):
         'members' :  Member.objects.all(), 
         # 'memberCount'    : Member.objects.count()          
      }
-    return render(request, 'home.html', context)
+    return render(request, 'webapp/home.html', context)
 
 def about(request):
-    return  render(request, 'about.html')    
+    return  render(request, 'webapp/about.html')    
 
 
 def contributions(request):
@@ -23,7 +23,7 @@ def contributions(request):
            'payments': Contributions.objects.all(),
            'paidMembers': Contributions.objects.count()
        }
-    return render(request, 'contributions.html', context) 
+    return render(request, 'webapp/contributions.html', context) 
 
 
 @login_required
@@ -41,7 +41,7 @@ def registration(request):
     else:
         form = MemberRegForm() 
         
-    return render(request, 'registration.html', {'form': form})
+    return render(request, 'webapp/registration.html', {'form': form})
 
 @login_required
 def deceased(request):
@@ -55,7 +55,7 @@ def deceased(request):
     else:        
         form = DeceasedForm()
 
-    return render(request, 'deceased.html', {'form': form})
+    return render(request, 'webapp/deceased.html', {'form': form})
 
     
 @login_required
@@ -69,7 +69,7 @@ def payments(request):
             return redirect('contributions')
     else:        
         form = ContribForm()
-    return render(request, 'payments.html', {'form':form})
+    return render(request, 'webapp/payments.html', {'form':form})
 
 
 

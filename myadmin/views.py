@@ -16,7 +16,7 @@ def  register(request):
             return redirect('login')
     else:
         form = UserRegisterForm()    
-    return render(request, 'register.html', {'form':form})
+    return render(request, 'myadmin/register.html', {'form':form})
 
 
 
@@ -44,4 +44,4 @@ def profile(request):
         'p_form': p_form
     }
      
-    return render(request, 'profile.html', context )
+    return render(request, 'myadmin/profile.html', context )
