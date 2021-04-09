@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 pending = False
 class Member(models.Model):
+    
     SURBUBS = (
         ('Kuyasa', 'Kuyasa'), ('Harare', 'Harare'), ('Makhaza', 'Makhaza'), ('Site B', 'Site B'), ('Site C', 'Site C'),('kraaifontain', 'Kraaifontain')
         
