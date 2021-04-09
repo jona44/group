@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 pending = False
 class Member(models.Model):
-    
+
     SURBUBS = (
         ('Kuyasa', 'Kuyasa'), ('Harare', 'Harare'), ('Makhaza', 'Makhaza'), ('Site B', 'Site B'), ('Site C', 'Site C'),('kraaifontain', 'Kraaifontain')
         
@@ -43,7 +43,7 @@ class Contributions(models.Model):
     
    
     def __str__(self): 
-        return "%s" % (self.Name), "%s" %(self.Admin)        
+        return str(self.Name)       
      
     class Meta:
         unique_together =[ ['deceased', 'Name' ]  ]    
