@@ -277,7 +277,7 @@ tr:nth-child(even) {
   background: #949494;
 }
 footer {
-  font-size: small;
+  font-size:x-small;
   padding-top: 20px;
   position:absolute;
   left: 0%;
