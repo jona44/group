@@ -10,7 +10,7 @@ body{ background: rgb(201, 202, 206);
   font-family: 'Poppins', sans-serif;
 }
 .wrapper{
-  background:  rgb(26, 4, 92);
+  background:  rgb(138, 137, 141);
 
   width: 100%;
 }
@@ -44,7 +44,7 @@ nav .content .links{
 }
 .content .links li a,
 .content .links li label{
-  color:rgb(0, 183, 255);
+  color:rgb(21, 3, 100);
   font-size: 18px;
   font-weight: 500;
   padding: 9px 17px;
@@ -121,7 +121,7 @@ nav .content .links{
 /* Dropdown Menu code start */
 .content .links ul{
   position: absolute;
-  background:  rgb(56, 55, 59);
+  background:  rgb(129, 126, 136);
   top: 80px;
   z-index: 1;
   opacity: 0;
