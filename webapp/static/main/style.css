@@ -269,14 +269,14 @@ table, th, tr {
   border: 1px solid gray;
 }
 table th{
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(14, 85, 5);
 }
 
 tr:nth-child(even) {
   background: #949494;
 }
-footer {
+/* footer {
   font-size:x-small;
   padding-top: 20px;
   position:fixed;
@@ -287,7 +287,7 @@ footer {
   color: rgb(6,92, 6);
   background-color: rgb(154, 153, 158);
   text-align: center;
-}
+} */
 .logs {
   display: inline-flex;
   margin-left: 600px;
@@ -299,5 +299,5 @@ footer {
 }
 #var{
   color:rgb(7, 6, 92);
-  font-size: 20px;
+  font-size: 15px;
 }
