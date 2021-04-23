@@ -1,11 +1,21 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
+
 <div class="container">
-    <h2>you have been logged out  </h2>
-    <div class="form-group">
-      <a class="ml-2" href="{% url 'register' %}">Login</a>
-      <small class="text-muted ml-2">
+  <div class="row justify-content-center">
+    <div class="col-md">
+      <div class="card card-body">
+        <button class="btn btn-primary btn-sm btn-primary"><h4>you have been logged out</h4> </button>
+        
+         <div class="form-group">
+           <a class="ml-2" href="{% url 'login' %}">Login</a>
+         
+         </div>
+
+      </div>
     </div>
+  </div>
+    
   </div>
 {% endblock content %}

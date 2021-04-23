@@ -1,31 +1,40 @@
 {% extends 'base.html' %}
 <!-- {% load crispy_forms_tags%} -->
 {% load static %}
+
+
 {% block content %}
 
-
-
 <div class="container">
-  <header><h3>This is a list of all member who have contributed to <span id="hm">KHUMBULEKHAYA</span> </h3></header>
-     </div>
+   <div class="row justify-content-center">
+      <div class="col-md">
+         <div class="card card-body">
+            <button class="btn btn-primary btn-sm btn-primary"><h4> Contributed Members</h4>Total : {{ paidMembers }}</button>
+                  <table>
+                     <tr>
+                        
+                        <th>Name</th> 
+                        <th>deceased</th> 
+                        <th>Admin</th>                      
+                        <th>Date</th>                      
+                     </tr>
+                       {% for item in payments %}
+                     <tr>
+                        <td>{{item.name}}</td>                                      
+                        <td>{{item.deceased}}</td>                                      
+                        <td>{{item.admin}}</td>                                
+                        <td>{{item.Date|date:"d, b, y"}}</td>                                
+                     </tr>   
+                        {% endfor %}
+                   </table>
+         </div>
+
+      </div>
+   </div>
+</div>
           <div class="container" >
                                
-             <table>
-                  <tr>
-                     <th>id</th> 
-                     <th>Name</th> 
-                     <th>admin</th>                      
-                  </tr>
-                 {% for item in payments %}
-                  <tr>
-                    <td>{{item.id}}</td>
-                    <td>{{item.Name}}</td>                                      
-                    <td>{{item.Admin}}</td>
-                    
-                  </tr>   
-                 {% endfor %}
-
-              </table>
+            
 
               
           </div>      

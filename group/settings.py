@@ -89,8 +89,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'group.wsgi.application'
-
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -151,8 +151,8 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = '/login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),
-)
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
