@@ -42,7 +42,7 @@ class Contributions(models.Model):
     Paid= (('not_paid','not_paid'),('paid','paid'))
 
     deceased          = models.ForeignKey(Deceased, default=True, on_delete=models.CASCADE, related_name= '+')
-    name              = models.OneToOneField(Member, default=True, on_delete=models.CASCADE)
+    Name              = models.OneToOneField(Member, default=True, on_delete=models.CASCADE)
     admin             = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name= '+')
     Date              = models.DateTimeField(auto_now_add=True, null=True)
 
@@ -51,7 +51,7 @@ class Contributions(models.Model):
         return str(self.Name)       
      
     class Meta:
-        unique_together =[ ['deceased', 'name' ]  ] 
-        ordering        = ('-Date', 'name')   
+        unique_together =[ ['deceased', 'Name' ]  ] 
+        ordering        = ('-Date', 'Name')   
 
 
