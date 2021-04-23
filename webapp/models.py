@@ -42,7 +42,7 @@ class Contributions(models.Model):
     Paid= (('not_paid','not_paid'),('paid','paid'))
 
     deceased          = models.ForeignKey(Deceased, default=True, on_delete=models.CASCADE, related_name= '+')
-    name              = models.ForeignKey(Member, default=True, on_delete=models.CASCADE, unique=True)
+    name              = models.OneToOneField(Member, default=True, on_delete=models.CASCADE)
     admin             = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name= '+')
     Date              = models.DateTimeField(auto_now_add=True, null=True)
 
