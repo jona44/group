@@ -21,5 +21,5 @@ class ContribForm(ModelForm):
     
     class Meta:
         model = Contributions
-        fields = ['Name', 'admin']
+        fields = ['member', 'admin']
 

@@ -18,7 +18,7 @@ class Member(models.Model):
     Last_Name     = models.CharField(max_length=20)
     Cell_Number   = models.CharField(max_length=10 )
     Surbub        = models.CharField(max_length=200, choices=SURBUBS)
-    admin         = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    admin         = models.ForeignKey(User, null=True, default=False, on_delete=models.CASCADE)
     Date          = models.DateTimeField(auto_now_add=True)
       
 
@@ -42,16 +42,16 @@ class Contributions(models.Model):
     Paid= (('not_paid','not_paid'),('paid','paid'))
 
     deceased          = models.ForeignKey(Deceased, default=True, on_delete=models.CASCADE, related_name= '+')
-    Name              = models.OneToOneField(Member, default=True, on_delete=models.CASCADE)
+    member            = models.OneToOneField(Member, default=True, on_delete=models.CASCADE)
     admin             = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name= '+')
     Date              = models.DateTimeField(auto_now_add=True, null=True)
 
    
     def __str__(self): 
-        return str(self.Name)       
+        return str(self.member)       
      
     class Meta:
-        unique_together =[ ['deceased', 'Name' ]  ] 
-        ordering        = ('-Date', 'Name')   
+        unique_together =[ ['deceased', 'member' ]  ] 
+        ordering        = ('-Date', )   
 
 
