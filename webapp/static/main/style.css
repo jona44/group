@@ -42,3 +42,10 @@ table th{
 tr:nth-child(even) {
   background: #e4e2e2;
 }
+ .a li:hover > ul{
+   color: blue;
+   background-color: white;
+
+  
+  
+}

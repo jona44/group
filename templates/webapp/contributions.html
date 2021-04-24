@@ -10,34 +10,27 @@
       <div class="col-md">
          <div class="card card-body">
             <button class="btn btn-primary btn-sm btn-primary"><h4> Contributed Members</h4>Total : {{ paidMembers }}</button>
-                  <table>
-                     <tr>
-                        
-                        <th>Name</th> 
-                        <th>deceased</th> 
-                        <th>Admin</th>                      
-                        <th>Date</th>                      
-                     </tr>
-                       {% for item in payments %}
-                     <tr>
-                        <td>{{item.member}}</td>                                      
-                        <td>{{item.deceased}}</td>                                      
-                        <td>{{item.admin}}</td>                                
-                        <td>{{item.Date|date:"d, b, y"}}</td>                                
-                     </tr>   
-                        {% endfor %}
-                   </table>
+               
          </div>
-
+         <table>
+            <tr>
+               
+               <th>Name</th> 
+               <th>deceased</th> 
+               <th>Admin</th>                      
+               <th>Date</th>                      
+            </tr>
+              {% for item in payments %}
+            <tr>
+               <td>{{item.member}}</td>                                      
+               <td>{{item.deceased}}</td>                                      
+               <td>{{item.admin}}</td>                                
+               <td>{{item.Date|date:"d, b, y"}}</td>                                
+            </tr>   
+               {% endfor %}
+          </table>
       </div>
    </div>
 </div>
-          <div class="container" >
-                               
-            
-
-              
-          </div>      
-     </div>                 
- </div>    
+         
  {% endblock %}
