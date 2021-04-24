@@ -5,37 +5,36 @@
     
 </style>
 
- <div class="container">
+ <!-- <div class="container"> -->
     <div class="row justify-content-center ">
-      <div class="col-md">
-          
-      <div class="card card-body">
+      <div class="col-md-6">
+        <div class="card card-body">
           <button class="btn btn-primary btn-sm btn-primary"><h4>Khumbulekhaya Members</h4>Total: {{ memberCount }}</button>
-          <table class="table table-sm">
-              <tr>
-                <tr>
-                  
-                  <th>Name</th> 
-                  <th>Cell Number</th> 
-                  <th>Surbub</th> 
-                  <th>Admin</th> 
-                  <th>Date</th> 
-                                       
-              </tr>
-              {% for item in members %}
-              <tr>
-                
-                <td><small>{{ item.Last_Name}} {{ item.First_Name}}</small></td>
-                <td><small>{{item.Cell_Number}}</small></td>
-                <td><small>{{item.Surbub}}</small></td>
-                <td><small>{{item.admin}}</small></td>
-                <td><small>{{ item.Date|date:"d, b, y"}}</small></td>  
-                               
-              </tr>
-              {%endfor%}
-          </table>
-    
+             
       </div>
+      <table class="table table-sm">
+        <tr>
+          <tr>
+            
+            <th>Name</th> 
+            <th>Phone</th> 
+            <th>Surbub</th> 
+            <th>Admin</th> 
+            <th>Date</th> 
+                                 
+        </tr>
+        {% for item in members %}
+        <tr>
+          
+          <td><small>{{ item.Last_Name}} {{ item.First_Name}}</small></td>
+          <td><small>{{item.Cell_Number}}</small></td>
+          <td><small>{{item.Surbub}}</small></td>
+          <td><small>{{item.admin}}</small></td>
+          <td><small>{{ item.Date|date:"d, b, y"}}</small></td>  
+                         
+        </tr>
+        {%endfor%}
+    </table>
     </div>
-</div>
+
 {% endblock %}

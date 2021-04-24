@@ -13,7 +13,7 @@ class Member(models.Model):
         ('Kuyasa', 'Kuyasa'), ('Harare', 'Harare'), ('Makhaza', 'Makhaza'), ('Site B', 'Site B'), ('Site C', 'Site C'),('kraaifontain', 'Kraaifontain')
         
     )
-    CHOICES= (('paid' ,'paid'), ('pending', 'pending'))
+    
     First_Name    = models.CharField(max_length=20)
     Last_Name     = models.CharField(max_length=20)
     Cell_Number   = models.CharField(max_length=10 )
